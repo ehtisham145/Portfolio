@@ -8,6 +8,7 @@ export const profile = {
     "Building Production Software End-to-End",
   ],
   email: "ehtisham2406@gmail.com",
+  whatsapp: "923271141797",
   linkedin:
     "https://www.linkedin.com/in/ehtisham-iftikhar-4b6b86309/",
   website: "https://e-numerak.com/",
@@ -55,7 +56,8 @@ export const skills = {
   ],
   "Backend & APIs": ["Django", "FastAPI", "Node.js", "Express.js", "MongoDB"],
   "Frontend & Mobile": ["React", "React Native", "Expo"],
-  Automation: ["n8n"],
+  "DevOps & Tools": ["Linux", "Docker", "Git", "GitHub", "Networking"],
+  "AI Automation": ["Claude", "Gemini", "make.com", "n8n"],
 };
 
 export const projects = [
@@ -72,6 +74,7 @@ export const projects = [
     subtitle: "Integrated within E-Numerak",
     description:
       "An end-to-end conversational AI assistant embedded directly into the platform, built to answer real user queries around invoicing, VAT rules, and compliance — reducing support load and helping users self-serve. Built independently, from architecture to production integration.",
+    link: "https://e-numerak.com/",
     tags: ["RAG", "AI Agents", "NLP"],
   },
   {

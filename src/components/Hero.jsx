@@ -45,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-lg sm:text-xl text-indigo-500 dark:text-indigo-400 font-medium mb-4"
+          className="text-lg sm:text-xl text-red-500 dark:text-red-500 font-medium mb-4"
         >
           Hi there, I'm
         </motion.p>
@@ -63,7 +63,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 text-xl sm:text-2xl text-slate-600 dark:text-slate-300"
+          className="mt-6 text-xl sm:text-2xl text-neutral-600 dark:text-neutral-300"
         >
           {profile.title} — {profile.tagline}
         </motion.p>
@@ -72,7 +72,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-6 h-8 text-lg sm:text-xl font-mono text-indigo-500 dark:text-indigo-400"
+          className="mt-6 h-8 text-lg sm:text-xl font-mono text-red-500 dark:text-red-500"
         >
           <span>{typed}</span>
           <span className="animate-pulse">|</span>
@@ -86,13 +86,13 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 hover:scale-105 transition-all shadow-lg shadow-indigo-500/30"
+            className="px-6 py-3 rounded-full bg-red-600 text-white font-medium hover:bg-red-500 hover:scale-105 transition-all shadow-lg shadow-red-600/30"
           >
             View Work
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-800 hover:scale-105 transition-all"
+            className="px-6 py-3 rounded-full border border-neutral-300 dark:border-neutral-700 font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:scale-105 transition-all"
           >
             Contact Me
           </a>
@@ -102,15 +102,15 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-8 flex items-center justify-center gap-5 text-slate-500 dark:text-slate-400"
+          className="mt-8 flex items-center justify-center gap-5 text-neutral-500 dark:text-neutral-400"
         >
-          <a href={`mailto:${profile.email}`} className="hover:text-indigo-500 hover:scale-125 transition-all" aria-label="Email">
+          <a href={`mailto:${profile.email}`} className="hover:text-red-500 hover:scale-125 transition-all" aria-label="Email">
             <FiMail size={20} />
           </a>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-indigo-500 hover:scale-125 transition-all" aria-label="LinkedIn">
+          <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-red-500 hover:scale-125 transition-all" aria-label="LinkedIn">
             <FiLinkedin size={20} />
           </a>
-          <a href={profile.website} target="_blank" rel="noreferrer" className="hover:text-indigo-500 hover:scale-125 transition-all" aria-label="Website">
+          <a href={profile.website} target="_blank" rel="noreferrer" className="hover:text-red-500 hover:scale-125 transition-all" aria-label="Website">
             <FiGlobe size={20} />
           </a>
         </motion.div>
@@ -120,7 +120,7 @@ export default function Hero() {
         href="#about"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.6, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-400 dark:text-slate-500"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-neutral-400 dark:text-neutral-500"
         aria-label="Scroll down"
       >
         <FiArrowDown size={22} />
