@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FiArrowDown, FiLinkedin, FiMail, FiGlobe } from "react-icons/fi";
 import ParticleBackground from "./ParticleBackground";
 import { profile } from "../data";
+import profilePhoto from "../assets/ehtisham.jpg";
 
 function useTypewriter(words, speed = 60, pause = 1400) {
   const [text, setText] = useState("");
@@ -41,6 +42,20 @@ export default function Hero() {
       <ParticleBackground />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="relative w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-6"
+        >
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 blur-md opacity-60" />
+          <img
+            src={profilePhoto}
+            alt={profile.name}
+            className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-950 shadow-xl"
+          />
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

@@ -7,6 +7,7 @@ export const profile = {
     "AI/ML Engineer | RAG + AI Agents",
     "Building Production Software End-to-End",
   ],
+  photo: "ehtisham.jpg",
   email: "ehtisham2406@gmail.com",
   whatsapp: "923271141797",
   linkedin:
@@ -86,6 +87,14 @@ export const projects = [
       "Invoice creation, product catalog, customer/company management, and compliance workflows, all on mobile. Built solo, end-to-end, using AI-assisted development (React Native + Expo) — from UI to API integration to build & release pipeline.",
     link: "https://expo.dev/accounts/ehtisham787/projects/enumerak-app/builds",
     tags: ["React Native", "Expo", "Mobile"],
+  },
+  {
+    title: "MarkX",
+    subtitle: "Fintech Investment, Referral & Community Platform",
+    description:
+      "A production-grade, full-stack fintech platform combining high-yield automated investment plans, a 5-level referral commission closure tree, and gamified rank progression (Bronze to Master) — wrapped in a custom Crimson & Obsidian dark-mode UI. Features a high-performance closure-table referral engine for O(1) upline/downline resolution, a dual wallet system with admin-audited deposits/withdrawals, and async commission & yield payouts via Celery and Redis.",
+    link: "https://markx.pro",
+    tags: ["Django", "DRF", "React", "PostgreSQL", "Redis", "Celery", "Docker"],
   },
 ];
 
