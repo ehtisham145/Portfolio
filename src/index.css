@@ -13,7 +13,7 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  @apply bg-white text-neutral-800 dark:bg-black dark:text-neutral-200;
+  @apply bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -24,9 +24,9 @@ body {
   @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-red-500/50 dark:bg-red-600/50 rounded-full;
+  @apply bg-indigo-400/50 dark:bg-indigo-500/50 rounded-full;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-red-500 to-red-400;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
 }

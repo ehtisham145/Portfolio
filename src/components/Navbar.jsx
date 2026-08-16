@@ -28,7 +28,7 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "bg-white/70 dark:bg-black/70 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800"
+          ? "bg-white/70 dark:bg-slate-950/70 backdrop-blur-md border-b border-slate-200 dark:border-slate-800"
           : "bg-transparent"
       }`}
     >
@@ -42,7 +42,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-red-500 dark:hover:text-red-500 transition-colors"
+              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-500 transition-colors"
             >
               {l.label}
             </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
           <button
             onClick={() => setDark(!dark)}
             aria-label="Toggle theme"
-            className="p-2 rounded-full border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            className="p-2 rounded-full border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
           >
             {dark ? <FiSun size={16} /> : <FiMoon size={16} />}
           </button>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <button
             onClick={() => setDark(!dark)}
             aria-label="Toggle theme"
-            className="p-2 rounded-full border border-neutral-300 dark:border-neutral-700"
+            className="p-2 rounded-full border border-slate-300 dark:border-slate-700"
           >
             {dark ? <FiSun size={16} /> : <FiMoon size={16} />}
           </button>
@@ -75,7 +75,7 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-white dark:bg-black border-t border-neutral-200 dark:border-neutral-800"
+          className="md:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800"
         >
           <div className="flex flex-col px-6 py-4 gap-4">
             {links.map((l) => (
@@ -83,7 +83,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-neutral-600 dark:text-neutral-300"
+                className="text-sm font-medium text-slate-600 dark:text-slate-300"
               >
                 {l.label}
               </a>

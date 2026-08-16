@@ -11,7 +11,7 @@ export default function Projects() {
           <h2 className="text-3xl font-bold text-center mb-2">
             Featured <span className="gradient-text">Work</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-red-600 via-red-500 to-red-400 mx-auto rounded-full mb-12" />
+          <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full mb-12" />
         </Reveal>
 
         <div className="grid gap-6">
@@ -33,7 +33,7 @@ export default function Projects() {
                 <Wrapper
                   {...wrapperProps}
                   whileHover={{ y: -6, scale: 1.01 }}
-                  className="group block p-7 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/60 hover:border-red-500 dark:hover:border-red-500 hover:shadow-xl hover:shadow-red-600/10 transition-all duration-300 cursor-pointer"
+                  className="group block p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-600/10 transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex items-start justify-between gap-4 flex-wrap">
                     <div>
@@ -42,17 +42,17 @@ export default function Projects() {
                         {p.link && (
                           <FiExternalLink
                             size={16}
-                            className="text-neutral-400 group-hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                            className="text-slate-400 group-hover:text-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"
                           />
                         )}
                       </h3>
-                      <p className="text-sm text-red-500 dark:text-red-500 mt-1">
+                      <p className="text-sm text-indigo-500 dark:text-indigo-500 mt-1">
                         {p.subtitle}
                       </p>
                     </div>
                   </div>
 
-                  <p className="mt-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  <p className="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
                     {p.description}
                   </p>
 
@@ -60,7 +60,7 @@ export default function Projects() {
                     {p.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs font-medium px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300"
+                        className="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
                       >
                         {tag}
                       </span>
