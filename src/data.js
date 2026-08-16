@@ -13,6 +13,8 @@ export const profile = {
     "https://www.linkedin.com/in/ehtisham-iftikhar-4b6b86309/",
   website: "https://e-numerak.com/",
   about: [
+    "I am a BS Data Science student at the Virtual University of Pakistan, focusing on Machine Learning, Python programming, and Generative AI. My goal is to build a solid career as an AI/ML Engineer by learning how to connect AI concepts with practical backend applications.",
+    "On the development side, I have hands-on experience building foundational Generative AI features, such as Retrieval-Augmented Generation (RAG) pipelines, automated web scraping scripts, and working with vector databases. Alongside AI, I focus heavily on backend web development, creating steady server architectures, handling system integrations, and building administrative dashboards to track user metrics. To expand my skill set, I am currently exploring and studying autonomous AI Agent workflows to learn how to build more independent systems.",
     "I'm a full-stack developer with strong AI/ML foundations — I don't just prototype, I ship production-level software that real businesses use.",
     "Contributing developer on E-Numerak — a live UAE-based e-invoicing (tax compliance) platform.",
     "Designed & built an end-to-end AI Tax Chatbot integrated into E-Numerak, resolving real user queries on invoicing & VAT compliance.",

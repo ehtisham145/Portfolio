@@ -11,7 +11,7 @@ export default function Projects() {
           <h2 className="text-3xl font-bold text-center mb-2">
             Featured <span className="gradient-text">Work</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-red-700 via-red-500 to-black dark:to-red-300 mx-auto rounded-full mb-12" />
+          <div className="w-16 h-1 bg-gradient-to-r from-red-600 via-red-500 to-red-400 mx-auto rounded-full mb-12" />
         </Reveal>
 
         <div className="grid gap-6">

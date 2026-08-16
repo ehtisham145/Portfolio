@@ -28,5 +28,5 @@ body {
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-red-500 to-neutral-900 dark:to-white;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-red-500 to-red-400;
 }
