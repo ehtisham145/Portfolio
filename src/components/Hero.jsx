@@ -36,16 +36,16 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-start justify-center overflow-hidden pt-32 sm:pt-40"
     >
       <ParticleBackground />
 
-      <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-indigo-500 dark:text-indigo-400 font-medium mb-4"
+          className="text-lg sm:text-xl text-indigo-500 dark:text-indigo-400 font-medium mb-4"
         >
           Hi there, I'm
         </motion.p>
@@ -54,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-6xl font-bold tracking-tight gradient-text"
+          className="text-5xl sm:text-7xl font-bold tracking-tight gradient-text"
         >
           {profile.name}
         </motion.h1>
@@ -63,7 +63,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-lg sm:text-xl text-slate-600 dark:text-slate-300"
+          className="mt-6 text-xl sm:text-2xl text-slate-600 dark:text-slate-300"
         >
           {profile.title} — {profile.tagline}
         </motion.p>
@@ -72,7 +72,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-6 h-8 font-mono text-indigo-500 dark:text-indigo-400"
+          className="mt-6 h-8 text-lg sm:text-xl font-mono text-indigo-500 dark:text-indigo-400"
         >
           <span>{typed}</span>
           <span className="animate-pulse">|</span>
