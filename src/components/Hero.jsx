@@ -52,7 +52,7 @@ export default function Hero() {
           <img
             src={profilePhoto}
             alt={profile.name}
-            className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-950 shadow-xl"
+            className="relative w-full h-full object-cover object-[50%_18%] rounded-full border-4 border-white dark:border-slate-950 shadow-xl"
           />
         </motion.div>
 
