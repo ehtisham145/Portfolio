@@ -21,6 +21,8 @@ export const profile = {
   website: "https://e-numerak.com/",
   // PDF file inside /public. Set to null to hide all resume buttons.
   resume: "Ehtisham_Iftikhar_Resume.pdf",
+  // Bump this whenever the resume PDF changes, so browsers fetch the new file instead of a cached one.
+  resumeVersion: "2026-11-24",
   about: [
     "I'm a full-stack developer and AI engineer based in Lahore, Pakistan. I'm pursuing a BS in Data Science at Virtual University of Pakistan while building and shipping production software for real clients.",
     "I work across the whole product lifecycle: designing backend systems, building clean interfaces, integrating AI where it adds real value, and deploying to production. I care about reliability, so I test, load-test and automate what I ship.",
@@ -29,7 +31,7 @@ export const profile = {
 };
 
 export const resumeUrl = profile.resume
-  ? `${import.meta.env.BASE_URL}${profile.resume}`
+  ? `${import.meta.env.BASE_URL}${profile.resume}?v=${profile.resumeVersion}`
   : null;
 
 export const stats = [
