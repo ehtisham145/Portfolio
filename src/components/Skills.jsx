@@ -1,36 +1,33 @@
-import { motion } from "framer-motion";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 import { skills } from "../data";
+import { card, container } from "./ui";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-slate-50/60 dark:bg-slate-900/30">
-      <div className="max-w-4xl mx-auto">
-        <Reveal>
-          <h2 className="text-3xl font-bold text-center mb-2">
-            Tech <span className="gradient-text">Stack</span>
-          </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full mb-12" />
-        </Reveal>
+    <section id="skills" className="bg-slate-50 py-24 dark:bg-slate-900/30">
+      <div className={container}>
+        <SectionHeading
+          eyebrow="Skills"
+          title="Tech stack"
+          description="The tools I use day to day to build, test and run software in production."
+        />
 
-        <div className="grid sm:grid-cols-2 gap-6">
-          {Object.entries(skills).map(([category, items], i) => (
-            <Reveal key={category} delay={i * 0.08}>
-              <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 h-full">
-                <h3 className="font-semibold mb-4 text-slate-800 dark:text-slate-100">
-                  {category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {Object.entries(skills).map(([category, items]) => (
+            <Reveal key={category} className="h-full">
+              <div className={`${card} h-full p-6`}>
+                <h3 className="font-semibold text-slate-900 dark:text-white">{category}</h3>
+                <ul className="mt-4 flex flex-wrap gap-2">
                   {items.map((skill) => (
-                    <motion.span
+                    <li
                       key={skill}
-                      whileHover={{ scale: 1.08, y: -2 }}
-                      className="px-3 py-1.5 rounded-full text-sm font-medium bg-indigo-50 text-indigo-600 dark:bg-indigo-600/10 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-600/30 cursor-default transition-shadow hover:shadow-md hover:shadow-indigo-600/20"
+                      className="rounded-md border border-slate-200 px-2.5 py-1 text-sm text-slate-700 dark:border-slate-700 dark:text-slate-300"
                     >
                       {skill}
-                    </motion.span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </Reveal>
           ))}

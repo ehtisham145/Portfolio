@@ -1,6 +1,6 @@
 # Portfolio — Ehtisham Iftikhar
 
-Interactive portfolio built with React, Vite, Tailwind CSS v4, and Framer Motion. Features particle background, scroll animations, and dark/light mode.
+Interactive portfolio built with React, Vite, Tailwind CSS v4, and Framer Motion. Sections: hero, about, experience timeline, project case studies, skills, credentials and contact. Dark/light mode with no flash on load, and reduced-motion support. All content lives in `src/data.js`.
 
 ## Development
 

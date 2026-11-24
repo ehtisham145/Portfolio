@@ -1,57 +1,45 @@
 import Reveal from "./Reveal";
-import { profile, certifications } from "../data";
+import SectionHeading from "./SectionHeading";
+import { profile } from "../data";
+import { card, container } from "./ui";
+
+const facts = [
+  { label: "Based in", value: profile.location },
+  {
+    label: "Education",
+    value: `${profile.education.degree}, ${profile.education.school} (${profile.education.status})`,
+  },
+  { label: "Focus", value: profile.focus.join(" · ") },
+  { label: "Availability", value: profile.availability },
+];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
-        <Reveal>
-          <h2 className="text-3xl font-bold text-center mb-2">
-            About <span className="gradient-text">Me</span>
-          </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full mb-12" />
-        </Reveal>
+    <section id="about" className="py-24">
+      <div className={container}>
+        <SectionHeading eyebrow="About" title="Engineer first, from idea to production" />
 
-        <div className="grid gap-3 mb-16">
-          {profile.about.map((line, i) => (
-            <Reveal key={i} delay={i * 0.05}>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-left sm:text-center">
-                {line}
-              </p>
-            </Reveal>
-          ))}
-        </div>
+        <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
+          <Reveal className="space-y-5 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+            {profile.about.map((para) => (
+              <p key={para}>{para}</p>
+            ))}
+          </Reveal>
 
-        <Reveal>
-          <h3 className="text-2xl font-semibold text-center mb-8">My Approach</h3>
-        </Reveal>
-        <div className="grid sm:grid-cols-2 gap-5 mb-16">
-          {profile.approach.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.08}>
-              <div className="h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm hover:border-indigo-500 dark:hover:border-indigo-500 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-indigo-600/10">
-                <h4 className="font-semibold text-indigo-500 dark:text-indigo-500 mb-2">
-                  {item.title}
-                </h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  {item.text}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal>
-          <h3 className="text-2xl font-semibold text-center mb-8">Certifications</h3>
-        </Reveal>
-        <div className="grid sm:grid-cols-2 gap-3">
-          {certifications.map((c, i) => (
-            <Reveal key={c} delay={i * 0.05}>
-              <div className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors">
-                <span className="w-2 h-2 rounded-full bg-indigo-500 shrink-0" />
-                <span className="text-sm text-slate-600 dark:text-slate-300">{c}</span>
-              </div>
-            </Reveal>
-          ))}
+          <Reveal delay={0.1}>
+            <dl className={`${card} divide-y divide-slate-200 dark:divide-slate-800`}>
+              {facts.map((f) => (
+                <div key={f.label} className="px-6 py-4">
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    {f.label}
+                  </dt>
+                  <dd className="mt-1 text-sm font-medium text-slate-800 dark:text-slate-200">
+                    {f.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
         </div>
       </div>
     </section>

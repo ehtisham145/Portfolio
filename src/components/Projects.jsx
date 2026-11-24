@@ -1,76 +1,145 @@
-import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
+import { FiArrowRight, FiExternalLink, FiGithub } from "react-icons/fi";
 import Reveal from "./Reveal";
-import { projects } from "../data";
+import SectionHeading from "./SectionHeading";
+import { moreProjects, profile, projects } from "../data";
+import { card, container, tag } from "./ui";
+
+const linkBtn =
+  "inline-flex items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-200 dark:hover:border-indigo-400 dark:hover:text-indigo-400";
+
+function FeaturedProject({ project: p }) {
+  const details = [
+    ["Problem", p.problem],
+    ["Solution", p.solution],
+    ["My role", p.role],
+  ];
+
+  return (
+    <article className={`${card} flex h-full flex-col p-7 transition-colors hover:border-indigo-500/50`}>
+      <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+        {p.subtitle}
+      </p>
+      <h3 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">{p.title}</h3>
+      <p className="mt-3 leading-relaxed text-slate-600 dark:text-slate-400">{p.description}</p>
+
+      <dl className="mt-6 space-y-4 text-sm">
+        {details.map(([label, text]) => (
+          <div key={label}>
+            <dt className="font-semibold text-slate-900 dark:text-slate-100">{label}</dt>
+            <dd className="mt-1 leading-relaxed text-slate-600 dark:text-slate-400">{text}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <ul className="mt-6 flex flex-wrap gap-2" aria-label="Tech stack">
+        {p.tags.map((t) => (
+          <li key={t} className={tag}>
+            {t}
+          </li>
+        ))}
+      </ul>
+
+      {(p.link || p.repo) && (
+        <div className="mt-auto flex flex-wrap gap-3 pt-6">
+          {p.link && (
+            <a href={p.link} target="_blank" rel="noreferrer" className={linkBtn}>
+              <FiExternalLink size={14} /> Live site
+            </a>
+          )}
+          {p.repo && (
+            <a href={p.repo} target="_blank" rel="noreferrer" className={linkBtn}>
+              <FiGithub size={14} /> Source code
+            </a>
+          )}
+        </div>
+      )}
+    </article>
+  );
+}
+
+function SmallProject({ project: p }) {
+  return (
+    <article className={`${card} flex h-full flex-col p-6 transition-colors hover:border-indigo-500/50`}>
+      <div className="flex items-start justify-between gap-4">
+        <h3 className="font-semibold text-slate-900 dark:text-white">{p.title}</h3>
+        <div className="-mr-2 -mt-1 flex shrink-0 text-slate-500 dark:text-slate-400">
+          {p.repo && (
+            <a
+              href={p.repo}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${p.title} source code`}
+              className="rounded-md p-1.5 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
+              <FiGithub size={17} />
+            </a>
+          )}
+          {p.link && (
+            <a
+              href={p.link}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${p.title} live site`}
+              className="rounded-md p-1.5 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
+              <FiExternalLink size={17} />
+            </a>
+          )}
+        </div>
+      </div>
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+        {p.description}
+      </p>
+      <ul className="mt-4 flex flex-wrap gap-2" aria-label="Tech stack">
+        {p.tags.map((t) => (
+          <li key={t} className={tag}>
+            {t}
+          </li>
+        ))}
+      </ul>
+    </article>
+  );
+}
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
-        <Reveal>
-          <h2 className="text-3xl font-bold text-center mb-2">
-            Featured <span className="gradient-text">Work</span>
-          </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full mb-12" />
-        </Reveal>
+    <section id="projects" className="py-24">
+      <div className={container}>
+        <SectionHeading
+          eyebrow="Projects"
+          title="Selected work"
+          description="Production platforms and AI systems I've designed, built and deployed."
+        />
 
-        <div className="grid gap-6">
-          {projects.map((p, i) => {
-            const fromSide = i % 2 === 0 ? -80 : 80;
-            const Wrapper = p.link ? motion.a : motion.div;
-            const wrapperProps = p.link
-              ? { href: p.link, target: "_blank", rel: "noreferrer" }
-              : {};
-
-            return (
-              <motion.div
-                key={p.title}
-                initial={{ opacity: 0, x: fromSide }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-              >
-                <Wrapper
-                  {...wrapperProps}
-                  whileHover={{ y: -6, scale: 1.01 }}
-                  className="group block p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-600/10 transition-all duration-300 cursor-pointer"
-                >
-                  <div className="flex items-start justify-between gap-4 flex-wrap">
-                    <div>
-                      <h3 className="text-xl font-semibold flex items-center gap-2">
-                        {p.title}
-                        {p.link && (
-                          <FiExternalLink
-                            size={16}
-                            className="text-slate-400 group-hover:text-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"
-                          />
-                        )}
-                      </h3>
-                      <p className="text-sm text-indigo-500 dark:text-indigo-500 mt-1">
-                        {p.subtitle}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {p.description}
-                  </p>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {p.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </Wrapper>
-              </motion.div>
-            );
-          })}
+        <div className="grid gap-6 lg:grid-cols-2">
+          {projects.map((p, i) => (
+            <Reveal key={p.title} delay={(i % 2) * 0.05} className="h-full">
+              <FeaturedProject project={p} />
+            </Reveal>
+          ))}
         </div>
+
+        <Reveal className="mt-20">
+          <h3 className="text-xl font-semibold text-slate-900 dark:text-white">More projects</h3>
+        </Reveal>
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {moreProjects.map((p) => (
+            <Reveal key={p.title} className="h-full">
+              <SmallProject project={p} />
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-10">
+          <a
+            href={`${profile.github}?tab=repositories`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
+          >
+            See all repositories on GitHub <FiArrowRight size={15} />
+          </a>
+        </Reveal>
       </div>
     </section>
   );
