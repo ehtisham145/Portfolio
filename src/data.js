@@ -60,7 +60,7 @@ export const experience = [
       "Building LessonLab end to end for a client: a multi-tenant school management SaaS for private schools in Saudi Arabia.",
       "Backend with Django, DRF, PostgreSQL, Redis and Celery; frontend with Next.js and TypeScript, in Arabic and English (RTL).",
       "Built AI lesson-plan generation, role-based access, and a teacher app with trial and paid plans.",
-      "Set up the CI/CD pipeline and production deployment.",
+      "Set up the CI/CD pipeline and deployed the platform to production on Oracle Cloud (OCI).",
     ],
   },
 ];
@@ -75,8 +75,8 @@ export const projects = [
       "Schools juggle attendance, classes, staff and lesson planning across scattered tools.",
     solution:
       "One secure platform with full data isolation per school, role-based access, and AI-generated lesson plans for teachers.",
-    role: "Sole developer, from design and backend to frontend, CI/CD and production deployment.",
-    tags: ["Django", "DRF", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Celery", "Docker", "GitHub Actions"],
+    role: "Sole developer, from design and backend to frontend, CI/CD and production deployment on Oracle Cloud.",
+    tags: ["Django", "DRF", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Celery", "Docker", "GitHub Actions", "Oracle Cloud"],
     link: "https://staging.lessonlab.me/",
     repo: `${GITHUB}/School-Management-Saas`,
   },
@@ -178,8 +178,8 @@ export const skills = {
   Backend: ["Django", "DRF", "FastAPI", "PostgreSQL", "Redis", "Celery"],
   Frontend: ["Next.js", "React", "Streamlit"],
   "AI / ML": ["RAG", "AI Agents", "OpenAI", "Hugging Face", "pgvector", "scikit-learn", "PyTorch"],
-  "DevOps & Testing": ["Linux", "Docker", "Git", "GitHub Actions", "CI/CD", "Grafana k6"],
-  Automation: ["n8n", "WhatsApp Business API"],
+  "DevOps & Cloud": ["Oracle Cloud (OCI)", "AWS", "Microsoft Azure", "Linux", "Docker", "Git", "GitHub Actions", "CI/CD", "Grafana k6"],
+  Automation: ["n8n", "LangChain", "LangGraph", "WhatsApp Business API"],
 };
 
 export const certifications = [

@@ -31,8 +31,7 @@ export default function Skills() {
               </div>
             </Reveal>
           ))}
-        </div>
-      </div>
+        </div>      </div>
     </section>
   );
 }
