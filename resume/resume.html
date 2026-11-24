@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Ehtisham Iftikhar – Resume</title>
+<style>
+  @page { size: A4; margin: 11mm 13mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.36;
+    color: #1f2937;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { text-align: center; margin-bottom: 8pt; }
+  h1 { font-size: 22pt; letter-spacing: 1.5pt; color: #1e3a5f; font-weight: 700; }
+  .headline { font-size: 10.8pt; font-weight: 600; color: #4b5563; margin-top: 1pt; letter-spacing: .4pt; }
+  .contact { font-size: 9.2pt; color: #4b5563; margin-top: 3pt; }
+  .contact span + span::before { content: "|"; color: #9ca3af; margin: 0 6pt; }
+  .contact a { color: #1e3a5f; text-decoration: underline; }
+  h2 {
+    font-size: 10.8pt; color: #1e3a5f; text-transform: uppercase; letter-spacing: .6pt;
+    border-bottom: 1.3pt solid #1e3a5f; padding-bottom: 1.5pt; margin: 9pt 0 4pt;
+    break-after: avoid;
+  }
+  p.summary { text-align: justify; }
+  .skills div { margin-bottom: 1.5pt; }
+  .skills b { color: #111827; }
+  .entry { margin-bottom: 6pt; }
+  .entry.keep { break-inside: avoid; }
+  li { break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
+  .title { font-weight: 700; color: #111827; font-size: 10.2pt; }
+  .meta { color: #4b5563; font-size: 9.2pt; white-space: nowrap; }
+  .sub { font-style: italic; color: #4b5563; font-size: 9.2pt; }
+  .sub a { color: #1e3a5f; text-decoration: underline; font-style: normal; }
+  .stack { color: #4b5563; font-size: 8.8pt; white-space: nowrap; }
+  ul { margin: 2.5pt 0 0 14pt; }
+  li { margin-bottom: 1.5pt; padding-left: 1pt; }
+  li::marker { color: #1e3a5f; }
+  li b { color: #111827; }
+  .certs { display: grid; grid-template-columns: 1.1fr 1fr; column-gap: 22pt; row-gap: 2pt; }
+  .certs div { display: flex; justify-content: space-between; gap: 8pt; }
+  .certs span:last-child { color: #4b5563; font-size: 9pt; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>EHTISHAM IFTIKHAR</h1>
+  <div class="headline">AI ENGINEER &amp; FULL-STACK DEVELOPER</div>
+  <div class="contact">
+    <span>ehtisham2406@gmail.com</span><span>+92 327 1141797</span><span>Lahore, Pakistan</span>
+  </div>
+  <div class="contact">
+    <span><a href="https://ehtisham145.github.io/Portfolio/">ehtisham145.github.io/Portfolio</a></span>
+    <span><a href="https://github.com/ehtisham145">github.com/ehtisham145</a></span>
+    <span><a href="https://www.linkedin.com/in/ehtisham-iftikhar-4b6b86309/">linkedin.com/in/ehtisham-iftikhar-4b6b86309</a></span>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">
+  Full-stack developer and AI engineer with 2 years of experience building and deploying production SaaS for clients
+  in the UAE and Saudi Arabia. I build multi-tenant platforms with Django, DRF and Next.js, and RAG systems, voice
+  agents and LLM agents with the privacy controls and guardrails real users need. I take products from first commit to
+  live Linux servers with Docker, CI/CD and monitoring, and I document architecture decisions so teams can build on my work.
+</p>
+
+<h2>Skills</h2>
+<div class="skills">
+  <div><b>Languages:</b> Python, TypeScript, JavaScript, SQL</div>
+  <div><b>Backend:</b> Django, Django REST Framework, FastAPI, PostgreSQL, Redis, Celery, SQLAlchemy, Pydantic, REST APIs, JWT, Webhooks</div>
+  <div><b>Frontend:</b> Next.js, React, Tailwind CSS, Streamlit, bilingual Arabic/English (RTL) interfaces</div>
+  <div><b>AI / LLM:</b> RAG pipelines, pgvector, embeddings, LLM agents &amp; tool-calling (ReAct), OpenAI, Hugging Face,
+    Pipecat, Whisper (STT), Piper (TTS), Microsoft Presidio, NVIDIA NeMo Guardrails</div>
+  <div><b>DevOps &amp; Testing:</b> Docker, Docker Compose, GitHub Actions CI/CD, Nginx, Let's Encrypt SSL, Linux server
+    administration, PM2, Grafana k6 load testing</div>
+  <div><b>Integrations:</b> Meta WhatsApp Business / Cloud API, Didit (KYC, identity verification &amp; AML screening), Supabase</div>
+</div>
+
+<h2>Experience</h2>
+
+<div class="entry">
+  <div class="row">
+    <span class="title">Full-Stack Developer</span>
+    <span class="meta">Nov 2024 – Present</span>
+  </div>
+  <div class="sub">AI Merak Tax Consultant LLC &nbsp;|&nbsp; On-site, Lahore</div>
+  <ul>
+    <li><b>E-Numerak</b> (e-numerak.com): build features for a live multi-tenant UAE e-invoicing SaaS that validates,
+      digitally signs and transmits PEPPOL BIS 3.0 / UBL 2.1 tax invoices to the Federal Tax Authority, with VAT and Excise
+      handling, role-based access and async processing on Celery queues.</li>
+    <li>Designed and shipped a <b>RAG-based AI Tax Chatbot</b> inside E-Numerak that answers VAT and e-invoicing questions
+      from a compliance knowledge base, using pgvector similarity search and FastAPI endpoints to cut repetitive support work.</li>
+    <li><b>Qomunix</b> (qomunix.com): built the company's multi-agent WhatsApp CRM on the Meta Business API, moving sales
+      chats from agents' personal phones to one secured company number and giving managers daily visibility into every
+      agent's clients and deals.</li>
+    <li><b>AML / KYC platform</b> (e-amli.com): integrated the Didit API for real-time document verification, face match,
+      liveness checks and AML screening, with webhook-driven status updates into the compliance workflow.</li>
+    <li>Own production deployment of 3 live company products: containerizing with Docker, deploying to Linux VPS servers
+      behind Nginx with SSL and custom domains, and automating releases with GitHub Actions CI/CD.</li>
+    <li>Administer production servers from the command line (containers, logs, service health) and load-test APIs with
+      Grafana k6 before releases.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <span class="title">Full-Stack Developer (Freelance)</span>
+    <span class="meta">Jul 2026 – Present</span>
+  </div>
+  <div class="sub">LessonLab &nbsp;|&nbsp; Remote, client in Saudi Arabia</div>
+  <ul>
+    <li>Sole developer of a multi-tenant school management SaaS for private schools, with role-based access for admins,
+      principals, teachers, students and parents.</li>
+    <li>Designed strict tenant isolation: every school-owned model inherits a shared tenant base, all reads go through
+      school-scoped selectors, and every endpoint ships with a cross-tenant test proving School A cannot access School B's data.</li>
+    <li>Built the Django/DRF, PostgreSQL, Redis and Celery backend and a Next.js/TypeScript frontend fully in Arabic and
+      English (RTL layouts, Gregorian storage with Hijri display).</li>
+    <li>Shipped AI lesson-plan generation and a teacher app with trial and paid plans, with email, payment and AI providers
+      kept behind adapters so they can be swapped without touching business logic.</li>
+    <li>Documented the system with Architecture Decision Records and Saudi PDPL security rules; set up the CI/CD pipeline
+      and production deployment.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="entry keep">
+  <div class="row">
+    <span class="title">Zero-Trust Clinical EHR Assistant</span>
+    <span class="stack">Python • FastAPI • pgvector • Presidio • NeMo Guardrails • Streamlit</span>
+  </div>
+  <div class="sub"><a href="https://github.com/ehtisham145/Secure-EHR-Patient-Chatbot">github.com/ehtisham145/Secure-EHR-Patient-Chatbot</a></div>
+  <ul>
+    <li>Privacy-first RAG system that lets clinicians query Electronic Health Records in plain language; built solo,
+      from data ingestion to API and chat UI.</li>
+    <li>Semantic search over clinical records with 768-dimension BioClinical ModernBERT embeddings stored in PostgreSQL pgvector.</li>
+    <li>Microsoft Presidio masks names, phone numbers, IDs, locations and dates before any text reaches the LLM; NVIDIA NeMo
+      Guardrails block medical advice, diagnoses and prescriptions.</li>
+    <li>Patient-scoped retrieval locks each chat session to one patient ID, so one patient's records can never leak into another's answers.</li>
+  </ul>
+</div>
+
+<div class="entry keep">
+  <div class="row">
+    <span class="title">Hospital AI Voice Receptionist</span>
+    <span class="stack">Python • Pipecat • Whisper • Piper • OpenAI • WebRTC • PM2</span>
+  </div>
+  <div class="sub"><a href="https://github.com/ehtisham145/AI_Calling_Bot">github.com/ehtisham145/AI_Calling_Bot</a></div>
+  <ul>
+    <li>Voice AI agent for a hospital front desk that books appointments, shares doctor availability and answers insurance
+      questions, with the caller choosing English or Arabic at the start of the call.</li>
+    <li>Self-hosted speech-to-text (Whisper) and text-to-speech (Piper), so only the LLM is a paid API; benchmarked models
+      on a 2-core VPS to confirm real-time performance.</li>
+    <li>Deployed on a VPS with PM2, log rotation and a one-command deploy script, plus a pre-flight API key check and
+      readable runtime error diagnosis.</li>
+  </ul>
+</div>
+
+<div class="entry keep">
+  <div class="row">
+    <span class="title">Autonomous Coding Agent</span>
+    <span class="stack">Python • OpenAI GPT-4o • Typer • Rich • Pydantic</span>
+  </div>
+  <div class="sub"><a href="https://github.com/ehtisham145/Coding_Agent">github.com/ehtisham145/Coding_Agent</a></div>
+  <ul>
+    <li>Terminal AI coding assistant, installable as a global <i>codeagent</i> command, built on a Reason → Act → Observe
+      (ReAct) loop with native tool-calling to read, write and patch files and run shell commands.</li>
+    <li>Safety first: every file write and command needs user confirmation, dangerous commands are blocked, and file
+      patches use atomic writes so files are never left corrupted; large outputs are truncated to protect the context window.</li>
+  </ul>
+</div>
+
+<div class="entry keep">
+  <div class="row">
+    <span class="title">WhatsApp AI Agent Platform</span>
+    <span class="stack">FastAPI • Meta WhatsApp Cloud API • OpenAI • SQLite</span>
+  </div>
+  <div class="sub"><a href="https://github.com/ehtisham145/Whatsapp-Agent">github.com/ehtisham145/Whatsapp-Agent</a></div>
+  <ul>
+    <li>Multi-tenant WhatsApp AI agent where each business is a JSON config, not a code fork: onboarding a new business
+      needs no code changes. First client: a matchmaking service with a sales-funnel conversation flow.</li>
+    <li>Built on Meta's official Cloud API to avoid ban risk; stores conversation history per customer, lets the owner take
+      over with /bot on|off commands, and forwards payment screenshots to the owner automatically.</li>
+  </ul>
+</div>
+
+<div class="entry keep">
+  <div class="row">
+    <span class="title">E-Numerak Monitoring System</span>
+    <span class="stack">FastAPI • SQLAlchemy • APScheduler • React • Recharts</span>
+  </div>
+  <div class="sub"><a href="https://github.com/ehtisham145/E-Numerak-Monitoring-System">github.com/ehtisham145/E-Numerak-Monitoring-System</a></div>
+  <ul>
+    <li>Self-hosted uptime monitor for E-Numerak's live services: checks every endpoint each 60 seconds, records every
+      check, and sends a WhatsApp alert the moment a service goes down or recovers.</li>
+    <li>React dashboard with live status, response-time charts, alert history and raw check logs, protected by signed, expiring JWT sessions.</li>
+  </ul>
+</div>
+
+<div class="entry keep">
+  <div class="row">
+    <span class="title">Royal Stationers POS</span>
+    <span class="stack">React • Supabase (PostgreSQL, Auth) • Vercel</span>
+  </div>
+  <div class="sub">Built with a teammate for a wholesale stationery importer</div>
+  <ul>
+    <li>Billing, multi-store stock and import software replacing the client's old desktop MIS: sale invoices, returns,
+      customer ledgers with credit limits, and four staff roles.</li>
+    <li>Ledger-based stock movements across store locations, container imports with landed cost spread by CBM, FIFO profit
+      per container, and delivery-trip tracking with database-stamped times.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="row">
+  <span><span class="title">BS Data Science</span> &nbsp;<span class="sub">Virtual University of Pakistan</span></span>
+  <span class="meta">Oct 2024 – Expected 2028</span>
+</div>
+
+<h2>Certifications</h2>
+<div class="certs">
+  <div><span>Machine Learning Specialization</span><span>Stanford &amp; DeepLearning.AI</span></div>
+  <div><span>Deep Learning Specialization</span><span>DeepLearning.AI</span></div>
+  <div><span>Prompt Engineering</span><span>Vanderbilt University</span></div>
+  <div><span>REST API Development</span><span>IBM</span></div>
+</div>
+
+</body>
+</html>
